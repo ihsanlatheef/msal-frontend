@@ -1,6 +1,7 @@
 import "./App.css";
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from "@azure/msal-react";
 import { loginRequest } from "./auth/AuthConfig";
+import Users from "./Users";
 
 function App() {
   const { instance } = useMsal();
@@ -27,6 +28,7 @@ function App() {
           <>
             <button onClick={handleLogoutRedirect}>Logout</button>
             <p>You are signed in!</p>
+            <Users />
           </>
         ) : null}
       </AuthenticatedTemplate>
